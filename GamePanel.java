@@ -22,12 +22,12 @@ public class GamePanel extends JPanel implements ActionListener {
     Random Random;
 
     GamePanel(){
-        random = new Random();
+        Random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
         this.setBackground(Color.black);
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
-        StartGame();
+        startGame();
         
     }
 
@@ -69,7 +69,7 @@ public class GamePanel extends JPanel implements ActionListener {
         
     }
 
-    public class MyKeyAdapter extends KeyAdapter{
+    public class MyKeyAdapter extends keyAdapter{
         @Override
         public void keyPressed(keyEvent e){
 
